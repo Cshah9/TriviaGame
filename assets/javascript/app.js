@@ -85,6 +85,7 @@ function resetGame() {
 	clearInterval(intervalId);
 	//reset clock
 	time = 30;
+	$("#display").html(convertTime(time));
 	//add instruction jumbotron;
 	$(".question").detach()
 	$("#main").append($jumbo);
