@@ -55,12 +55,12 @@ function startGame() {
 	}
 }
 
-function nextQuestion(isCorrect){
+function nextQuestion(isCorrect, isTimeUp){
 	console.log("nextQuestion : " + isCorrect + " : time - " + time);
 
 	var aStr = "";
 	
-	if (time==30){
+	if (isTimeUp){
 		//user ran out of time
 		console.log("warning panel");
 		aStr += '<div class="panel panel-warning message">';
@@ -169,7 +169,7 @@ function timesUp(){
 	//reset clock
 	time = 30;
 	//setup next question....
-	nextQuestion(false);
+	nextQuestion(false, true);
 
 }
 
@@ -203,7 +203,7 @@ function formatQuestion(q){
 	qStr+='  			  </div>';
 	qStr+='  			  <div class="panel-body">';	
 
-	for (var i = q.answers.length - 1; i >= 0; i--) {
+	for (var i = 0; i<q.answers.length; i++) {
 		
 		qStr+='  				<h2 class="option">' + q.answers[i] + '</h2>';
 	}

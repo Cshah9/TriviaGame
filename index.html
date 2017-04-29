@@ -4,10 +4,10 @@
 	<title>Trivia Game</title>
 	<!-- stylesheets -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 	<!-- Bootswatch Cerulean theme -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootswatchcerulean.css">
-
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<!-- Added link to the jQuery Library -->
   	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
@@ -21,8 +21,6 @@
 	    <div class="navbar-header">
 	      <a class="navbar-brand" href="#">Trivia Game</a>
 	    </div>
-
-	    <div class="collapse navbar-collapse" >
 	      <ul class="nav navbar-nav navbar-right">
 
 	      	<!-- Start Button -->
@@ -49,9 +47,11 @@
 	  <h1>Trivia Game</h1>
 	  <p> Click the start button above to begin!</p>
 	  <br>
-	  <p>Correct Answers: <span id="correct"></span></p>
+	  <p class="label label-primary">Correct Answers: <span id="correct"></span></p>
 	  <br>
-	  <p>Wrong Answers: <span id="wrong"></span></p>
+	  <br>
+	  <br>
+	  <p class="label label-default">Wrong Answers: <span id="wrong"></span></p>
 	</div>
   </div>
 
